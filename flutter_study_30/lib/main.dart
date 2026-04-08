@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study_30/widgets/container_sized.dart';
+import 'package:flutter_study_30/widgets/rows_cols.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.deepPurple,
         brightness: Brightness.dark,
       ),
-      home: ContainerSized(),
+      home: RowsCols(),
     );
   }
 }
