@@ -4,6 +4,7 @@ import 'package:flutter_study_30/widgets/button_elavated.dart';
 import 'package:flutter_study_30/widgets/container_sized.dart';
 
 import 'package:flutter_study_30/widgets/rows_cols.dart';
+import 'package:flutter_study_30/widgets/snackBar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
 
-      home: ListGridView(),
+      home: SnackBarWidget(),
     );
   }
 }
