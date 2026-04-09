@@ -14,7 +14,9 @@ class ButtonWidget extends StatelessWidget {
             TextButton(
               style: ButtonStyle(
                 padding: MaterialStateProperty.all(EdgeInsets.all(30)),
-                overlayColor: MaterialStateProperty.all(Colors.black),
+                overlayColor: MaterialStateProperty.all(
+                  Colors.white70.withOpacity(0.5),
+                ),
                 elevation: MaterialStateProperty.all(20),
                 backgroundColor: MaterialStateProperty.all(Colors.yellow),
               ),
@@ -22,7 +24,9 @@ class ButtonWidget extends StatelessWidget {
                 'Press me',
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
-              onPressed: () {},
+              onPressed: () {
+                print('Pressed the Normal Button');
+              },
             ),
             SizedBox(height: 20),
             Container(
@@ -40,7 +44,7 @@ class ButtonWidget extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  print('Like');
+                  print('Pressed the Elevated Button');
                 },
                 child: Text(
                   'Press me',
