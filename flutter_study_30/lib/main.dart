@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study_30/widgets/alert.dart';
+import 'package:flutter_study_30/widgets/animatedText.dart';
 import 'package:flutter_study_30/widgets/bottomSheet.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
 
-      home: BottomSheetWidget(),
+      home: AnimatedTextWidget(),
     );
   }
 }
