@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study_30/widgets/List_grid.dart';
 import 'package:flutter_study_30/widgets/alert.dart';
-import 'package:flutter_study_30/widgets/button_elavated.dart';
-import 'package:flutter_study_30/widgets/container_sized.dart';
-import 'package:flutter_study_30/widgets/dismissible.dart';
-import 'package:flutter_study_30/widgets/drawer.dart';
-import 'package:flutter_study_30/widgets/images.dart';
-import 'package:flutter_study_30/widgets/rows_cols.dart';
-import 'package:flutter_study_30/widgets/snackBar.dart';
+import 'package:flutter_study_30/widgets/bottomSheet.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +18,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
 
-      home: AlertWidget(),
+      home: BottomSheetWidget(),
     );
   }
 }
