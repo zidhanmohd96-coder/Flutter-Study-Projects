@@ -4,6 +4,7 @@ import 'package:flutter_study_30/widgets/animatedText.dart';
 import 'package:flutter_study_30/widgets/bottomNav.dart';
 import 'package:flutter_study_30/widgets/bottomSheet.dart';
 import 'package:flutter_study_30/widgets/dropdownlist.dart';
+import 'package:flutter_study_30/widgets/form.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
 
-      home: DropDownList(),
+      home: FormWidget(),
     );
   }
 }
