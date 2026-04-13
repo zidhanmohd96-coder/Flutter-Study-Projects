@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study_30/ui/visacard_ui/pages/visacard_home.dart';
 import 'package:flutter_study_30/widgets/alert.dart';
 import 'package:flutter_study_30/widgets/animatedText.dart';
 import 'package:flutter_study_30/widgets/bottomNav.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
 
-      home: StackWidget(),
+      home: VisacardHome(),
     );
   }
 }
