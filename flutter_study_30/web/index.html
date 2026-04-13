@@ -33,6 +33,11 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <script src="flutter_bootstrap.js" async>
+    navigator.geolocation.getCurrentPosition(
+    (position) => console.log(position),
+    (error) => console.error(error)
+  );
+  </script>
 </body>
 </html>
