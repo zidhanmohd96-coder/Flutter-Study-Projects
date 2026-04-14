@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study_30/ui/visacard_ui/pages/visacard_home.dart';
+import 'package:flutter_study_30/ui/info_ui/simple_ui.dart';
 import 'package:flutter_study_30/widgets/alert.dart';
 import 'package:flutter_study_30/widgets/animatedText.dart';
 import 'package:flutter_study_30/widgets/bottomNav.dart';
@@ -23,11 +24,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.indigo,
+        primaryColor: Colors.greenAccent,
         brightness: Brightness.dark,
       ),
 
-      home: LocationWidget(),
+      home: SimpleUI(),
     );
   }
 }
