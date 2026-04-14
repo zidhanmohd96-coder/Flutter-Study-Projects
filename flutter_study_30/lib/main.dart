@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study_30/ui/insta_ui/insta_ui.dart';
 import 'package:flutter_study_30/ui/visacard_ui/pages/visacard_home.dart';
 import 'package:flutter_study_30/ui/info_ui/simple_ui.dart';
 import 'package:flutter_study_30/widgets/alert.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
 
-      home: SimpleUI(),
+      home: InstaUI(),
     );
   }
 }
