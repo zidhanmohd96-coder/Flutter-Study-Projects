@@ -44,21 +44,23 @@ dependencies:
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
+  flutter_launcher_icons:
+  flutter_native_splash:
+
   flutter_test:
     sdk: flutter
-  
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/simple_logo.png"
+  remove_alpha_ios: true
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^6.0.0
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/simple_logo.png"
+  android: true
+  ios: true
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
 flutter:
 
   # The following line ensures that the Material Icons font is
