@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_study_30/ui/insta_ui/insta_ui.dart';
 import 'package:flutter_study_30/ui/visacard_ui/pages/visacard_home.dart';
 import 'package:flutter_study_30/ui/info_ui/simple_ui.dart';
@@ -13,7 +14,9 @@ import 'package:flutter_study_30/widgets/location.dart';
 import 'package:flutter_study_30/widgets/stack.dart';
 import 'package:flutter_study_30/widgets/tabbar.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
