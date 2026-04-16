@@ -1,22 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_study_30/ui/insta_ui/insta_ui.dart';
-import 'package:flutter_study_30/ui/visacard_ui/pages/visacard_home.dart';
-import 'package:flutter_study_30/ui/info_ui/simple_ui.dart';
-import 'package:flutter_study_30/widgets/alert.dart';
-import 'package:flutter_study_30/widgets/animatedText.dart';
-import 'package:flutter_study_30/widgets/bottomNav.dart';
-import 'package:flutter_study_30/widgets/bottomSheet.dart';
-import 'package:flutter_study_30/widgets/dropdownlist.dart';
-import 'package:flutter_study_30/widgets/form.dart';
-import 'package:flutter_study_30/widgets/imagePicker.dart';
-import 'package:flutter_study_30/widgets/location.dart';
-import 'package:flutter_study_30/widgets/stack.dart';
-import 'package:flutter_study_30/widgets/tabbar.dart';
+import 'package:flutter_study_30/firebase_options.dart';
+import 'package:flutter_study_30/firebaseAuthentication/firebaseAuthentication.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -27,12 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.greenAccent,
-        brightness: Brightness.dark,
-      ),
+      theme: ThemeData(brightness: Brightness.dark),
 
-      home: InstaUI(),
+      home: FirebaseAuthentication(),
     );
   }
 }
