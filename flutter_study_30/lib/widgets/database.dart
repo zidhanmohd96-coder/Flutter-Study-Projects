@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study_30/functions/dbFunction.dart';
+import 'package:flutter_study_30/pages/users.dart';
 
 class DatabaseOptions extends StatefulWidget {
   const DatabaseOptions({super.key});
@@ -50,7 +51,15 @@ class _DatabaseOptionsState extends State<DatabaseOptions> {
                 child: Text("Update"),
               ),
               SizedBox(height: 10),
-              ElevatedButton(onPressed: () {}, child: Text("Retrieve")),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UsersData()),
+                  );
+                },
+                child: Text("Retrieve"),
+              ),
               SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
