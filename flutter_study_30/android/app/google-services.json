@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1021282595697",
-    "project_id": "flutterstudy30",
-    "storage_bucket": "flutterstudy30.firebasestorage.app"
+    "project_number": "1057773922337",
+    "project_id": "flutterstudy30-b9cbe",
+    "storage_bucket": "flutterstudy30-b9cbe.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1021282595697:android:1ca5705a42a81cb155fcd0",
+        "mobilesdk_app_id": "1:1057773922337:android:68bde3ebd0109244201b60",
         "android_client_info": {
           "package_name": "com.zilzilastudy.flutterStudy30"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA5CPB5EFeF6nlIOyOM7VN_WPYPaKp2Rgc"
+          "current_key": "AIzaSyBeEeJtRxB-5xb4aLyTpsLjdI5y3tV4diE"
         }
       ],
       "services": {

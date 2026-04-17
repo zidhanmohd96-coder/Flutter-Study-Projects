@@ -89,7 +89,9 @@ class _FirebaseAuthenticationState extends State<FirebaseAuthentication> {
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();
-                      signUp(email, password);
+                      isLogin
+                          ? signIn(email, password)
+                          : signUp(email, password);
                     }
                   },
                   child: isLogin ? Text("Sign In") : Text("Sign Up"),
