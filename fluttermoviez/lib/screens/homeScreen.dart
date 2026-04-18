@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fluttermoviez/utils/text.dart';
+import 'package:fluttermoviez/widgets/topRatedMovies.dart';
+import 'package:fluttermoviez/widgets/trendingMovies.dart';
+import 'package:fluttermoviez/widgets/tvShows.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -43,13 +47,22 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Flutter Moviez',
-          style: TextStyle(color: Colors.white),
+        title: ModifiedText(
+          text: "Flutter Moviez",
+          color: Colors.white,
+          size: 20.0,
         ),
-        backgroundColor: Colors.teal,
+        centerTitle: true,
+        backgroundColor: Theme.of(context).primaryColor,
+        elevation: 1,
       ),
-      body: const Center(child: Text('Welcome to Flutter Moviez!')),
+      body: ListView(
+        children: [
+          TrendingMovies(trendingMovies: trendingMovies),
+          TopRatedMovies(topRatedMovies: topRatedMovies),
+          TvShows(tvShows: tvShows),
+        ],
+      ),
     );
   }
 }
