@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttermoviez/screens/homeScreen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -9,10 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Flutter Moviez')),
-        body: const Center(child: Text('Welcome to Flutter Moviez!')),
-      ),
+      home: HomeScreen(),
+      theme: ThemeData(primarySwatch: Colors.teal),
     );
   }
 }
