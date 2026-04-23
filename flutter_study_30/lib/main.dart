@@ -5,6 +5,7 @@ import 'package:flutter_study_30/firebaseAuthentication/firebaseAuthentication.d
 import 'package:flutter_study_30/firebase_options.dart';
 import 'package:flutter_study_30/graphs/cartesianChart.dart';
 import 'package:flutter_study_30/graphs/pieChart.dart';
+import 'package:flutter_study_30/graphs/radialChart.dart';
 import 'package:flutter_study_30/ui/overlapedAvatars_ui/overlappedAvatars.dart';
 import 'package:flutter_study_30/widgets/database.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return PieChart();
+            return RadialChart();
           } else {
             return FirebaseAuthentication();
           }
