@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_study_30/pages/home.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});
@@ -63,7 +64,11 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               ListTile(leading: Icon(Icons.folder), title: Text("My Files")),
               Divider(),
               ListTile(leading: Icon(Icons.share), title: Text("Share")),
-              ListTile(leading: Icon(Icons.logout), title: Text("Logout")),
+              ListTile(
+                leading: Icon(Icons.logout),
+                title: Text("Go Back"),
+                onTap: () {},
+              ),
             ],
           ),
         ),
@@ -73,7 +78,23 @@ class _DrawerWidgetState extends State<DrawerWidget> {
         elevation: 8,
         backgroundColor: Colors.indigo,
       ),
-      body: Center(child: Container(child: Text("Drawer Widget demo."))),
+      body: Center(
+        child: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Drawer Widget demo."),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("Back"),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -8,7 +8,7 @@ class AnimatedTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bottom Sheet'),
+        title: Text('Animated Text'),
         elevation: 8,
         backgroundColor: Colors.indigo,
       ),
