@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -13,8 +14,6 @@ final Uri _url = Uri.parse(
 );
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  bool isDark = true;
-
   Future<void> _launchRepo() async {
     if (!await launchUrl(_url, mode: LaunchMode.externalApplication)) {
       throw Exception('Could not launch $_url');
@@ -23,6 +22,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    bool isDarkMode = themeProvider.themeMode == ThemeMode.dark;
+
     return Scaffold(
       appBar: AppBar(title: Text("Settings"), elevation: 5),
       body: Container(
@@ -44,7 +46,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     "Darkmode",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
-                  Switch(value: isDark, onChanged: (bool isDark) {}),
+                  Switch(
+                    value: isDarkMode,
+                    onChanged: (bool value) {
+                      // Toggle theme via provider
+                      themeProvider.toggleTheme(value);
+                    },
+                  ),
                 ],
               ),
             ),
