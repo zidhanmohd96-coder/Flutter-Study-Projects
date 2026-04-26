@@ -32,16 +32,16 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
               width: double.infinity,
               color: Colors.indigo.shade200,
               child: Center(
-                child: files == null
+                child: file == null
                     ? Text(
-                        "Pick Images",
+                        "Pick a image",
                         style: TextStyle(
                           color: Theme.of(context).primaryColor,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       )
-                    : Image.file(File(files!.first.path)),
+                    : Image.file(File(file!.path)),
               ),
             ),
             SizedBox(height: 20),
@@ -55,9 +55,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
                 });
                 print("Image Path: ${file?.path}");
               },
-              child: file == null
-                  ? Text("Pick a Image")
-                  : Image.file(File(file!.path)),
+              child: Text("Pick a Image"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.indigo,
                 padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
@@ -65,7 +63,24 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
               ),
             ),
             SizedBox(height: 20),
-
+            Container(
+              height: 300,
+              width: double.infinity,
+              color: Colors.indigo.shade200,
+              child: Center(
+                child: files == null
+                    ? Text(
+                        "Pick Images",
+                        style: TextStyle(
+                          color: Theme.of(context).primaryColor,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      )
+                    : Image.file(File(files!.first.path)),
+              ),
+            ),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {
                 final List<XFile>? images = await _picker.pickMultiImage();
