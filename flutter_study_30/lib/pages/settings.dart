@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -8,6 +9,9 @@ class SettingsScreen extends StatefulWidget {
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
 }
+
+final user = FirebaseAuth.instance.currentUser;
+final String? email = user?.email;
 
 final Uri _url = Uri.parse(
   'https://github.com/zidhanmohd96-coder/Flutter-Study-Projects/tree/master/flutter_study_30',
@@ -36,6 +40,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         child: Column(
           children: [
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  Stack(
+                    children: [
+                      CircleAvatar(
+                        radius: 50,
+                        backgroundImage: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Text(email!, style: TextStyle(fontSize: 15)),
+                ],
+              ),
+            ),
             Container(
               margin: EdgeInsets.all(20),
               child: Row(
