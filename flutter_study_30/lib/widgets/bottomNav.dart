@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study_30/pages/home.dart';
 import 'package:flutter_study_30/pages/settings.dart';
+import 'package:flutter_study_30/pages/toDo.dart';
 import 'package:flutter_study_30/widgets/bottomSheet.dart';
 import 'package:flutter_study_30/widgets/dismissible.dart';
 import 'package:flutter_study_30/widgets/drawer.dart';
@@ -15,11 +16,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int selectedIndex = 0;
-  // List<Widget> pages = [
-  //   Center(child: Text('Home Page')),
-  //   Center(child: Text('Search Page')),
-  //   Center(child: Text('Profile Page')),
-  // ];
+
   PageController pageController = PageController();
 
   void onItemTapped(int index) {
@@ -39,7 +36,7 @@ class _BottomNavState extends State<BottomNav> {
       // ),
       body: PageView(
         controller: pageController,
-        children: [HomeScreen(), SettingsScreen()],
+        children: [HomeScreen(), SettingsScreen(), ToDoScreen()],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
@@ -50,6 +47,7 @@ class _BottomNavState extends State<BottomNav> {
             icon: Icon(Icons.settings),
             label: 'Settings',
           ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ToDo'),
         ],
 
         unselectedItemColor: Colors.grey,
