@@ -92,7 +92,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   }
                 },
                 child: Text(
-                  "Full Source Code(Github Link)",
+                  "Full Source Code(Github Link)↗",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+              ),
+            ),
+            SizedBox(height: 30),
+            Container(
+              margin: EdgeInsets.all(20),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll<Color>(
+                    Colors.redAccent,
+                  ),
+                ),
+                onPressed: () async {
+                  FirebaseAuth.instance.signOut();
+                },
+                child: Text(
+                  "Logout",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ),

@@ -30,24 +30,24 @@ class _BottomNavState extends State<BottomNav> {
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(
-      //   title: Text('Bottom Sheet'),
+      //   title: Text('Bottom Navigation'),
       //   elevation: 8,
       //   backgroundColor: Colors.indigo,
       // ),
       body: PageView(
         controller: pageController,
-        children: [HomeScreen(), SettingsScreen(), ToDoScreen()],
+        children: [HomeScreen(), ToDoScreen(), SettingsScreen()],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
         onTap: onItemTapped,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.notes), label: 'ToDo'),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Settings',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ToDo'),
         ],
 
         unselectedItemColor: Colors.grey,
