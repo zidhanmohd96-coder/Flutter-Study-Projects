@@ -33,13 +33,14 @@ class _DatabaseOptionsState extends State<DatabaseOptions> {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  createData(
-                    "users",
-                    "user1",
-                    "Nambiyar",
-                    "nambiyar@example.com",
-                    50,
-                  );
+                  // createData(
+                  //   "users",
+                  //   "user1",
+                  //   "Nambiyar",
+                  //   "nambiyar@example.com",
+                  //   50,
+                  // );
+                  createTodo("TodoList asdasda", false);
                 },
                 child: Text("Create"),
               ),

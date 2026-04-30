@@ -20,3 +20,20 @@ deleteData(String collName, docName) async {
   await FirebaseFirestore.instance.collection(collName).doc(docName).delete();
   print("Data deleted successfully");
 }
+
+// Create task and return the unique ID
+Future<String> createTodo(String task, bool isCompleted) async {
+  DocumentReference docRef = await FirebaseFirestore.instance
+      .collection("TodoList")
+      .add({
+        "task": task,
+        "status": isCompleted,
+        "timestamp": FieldValue.serverTimestamp(),
+      });
+  return docRef.id;
+}
+
+// Delete task using the ID
+Future<void> deleteTodo(String docId) async {
+  await FirebaseFirestore.instance.collection("TodoList").doc(docId).delete();
+}

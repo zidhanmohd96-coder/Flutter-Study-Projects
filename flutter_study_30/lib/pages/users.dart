@@ -16,21 +16,21 @@ class _UsersDataState extends State<UsersData> {
       body: Container(
         margin: EdgeInsets.all(30),
         child: StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection("users").snapshots(),
-          builder: (context, usersSnapshot) {
-            if (usersSnapshot.connectionState == ConnectionState.waiting) {
+          stream: FirebaseFirestore.instance.collection("TodoList").snapshots(),
+          builder: (context, todoSnapshot) {
+            if (todoSnapshot.connectionState == ConnectionState.waiting) {
               return Center(child: CircularProgressIndicator());
             }
             return ListView.builder(
-              itemCount: usersSnapshot.data!.docs.length,
+              itemCount: todoSnapshot.data!.docs.length,
               itemBuilder: (context, index) {
-                DocumentSnapshot doc = usersSnapshot.data!.docs[index];
+                DocumentSnapshot doc = todoSnapshot.data!.docs[index];
                 return Card(
                   elevation: 8,
                   child: ListTile(
-                    title: Text(doc["name"]),
-                    subtitle: Text(doc["email"]),
-                    trailing: Text("Age: ${doc["age"]}"),
+                    title: Text(doc["task"]),
+                    subtitle: Text(doc["status"].toString()),
+                    // trailing: Text("Age: ${doc["age"]}"),
                   ),
                 );
               },

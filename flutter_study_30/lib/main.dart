@@ -8,6 +8,7 @@ import 'package:flutter_study_30/graphs/liveChart.dart';
 import 'package:flutter_study_30/graphs/pieChart.dart';
 import 'package:flutter_study_30/graphs/radialChart.dart';
 import 'package:flutter_study_30/pages/settings.dart';
+import 'package:flutter_study_30/pages/toDo.dart';
 import 'package:flutter_study_30/ui/overlapedAvatars_ui/overlappedAvatars.dart';
 import 'package:flutter_study_30/widgets/database.dart';
 import 'package:flutter_study_30/widgets/bottomNav.dart';
