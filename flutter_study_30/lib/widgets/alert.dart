@@ -85,7 +85,7 @@ Future<void> _showMyDialog(BuildContext ctx) async {
                 },
                 child: Text('Show Alert'),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 30),
               HighlightView(
                 code,
                 language: 'dart',
