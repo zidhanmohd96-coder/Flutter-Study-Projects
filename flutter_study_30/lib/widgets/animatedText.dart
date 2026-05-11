@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AnimatedTextWidget extends StatelessWidget {
   const AnimatedTextWidget({super.key});
-
+// Animated Text
   @override
   Widget build(BuildContext context) {
     return Scaffold(
