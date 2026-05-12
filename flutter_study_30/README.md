@@ -1,6 +1,7 @@
 # flutter_study_30
 
-A new Flutter project.
+A Flutter app with so many widgets.
+All listed in one page with examples
 
 ## Getting Started
 
